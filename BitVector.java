@@ -4,7 +4,10 @@ public class BitVector {
     private static int BITSPERWORD = 32;
     private static int SHIFT = 5;
     private static int MASK = 0x1F;
-
+    
+   //In this array x[0] ~ [0, 31], x[1] ~ [32, 63], x[2] ~ [64, 95] and so on, in each element of array, the integers are represented  
+   //as the order of magnitude of 2.
+    
     static int[] x = new int[1 + 100 / BITSPERWORD];
     static int shift = 5;
     static int maskl = 0x1F;
