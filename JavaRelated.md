@@ -22,8 +22,8 @@ public class JavaInterview {
         s = s.trim();
         //Returns the index within this string of the first occurrence of the specified character.
         s.indexOf("a");
-        //Returns the index within this string of the first occurrence of the specified character, starting the search
-        // at the specified index(include).
+        //Returns the index within this string of the first occurrence of the specified character, starting the
+        //search at the specified index(include).
         s.indexOf("a", 1);
         //Returns the index within this string of the last occurrence of the specified character.
         s.lastIndexOf("a");
@@ -123,16 +123,17 @@ public class JavaInterview {
         //according to the order induced by the specified comparator.
         Collections.sort(list, Collections.reverseOrder());
         //Interface java.util.Comparator<T>: A comparison function, which imposes a total ordering on some 
-        //collection of objects. Comparators can be passed to a sort method (such as Collections.sort or Arrays.sort)
-        //to allow precise control over the sort order.Comparators can also be used to control the order of certain
-        //data structures (such as sorted sets or sorted maps), or to provide an ordering for collections of objects 
+        //collection of objects. Comparators can be passed to a sort method (such as Collections.sort or 
+        //Arrays.sort) to allow precise control over the sort order.Comparators can also be used to control
+        //the order of certain data structures (such as sorted sets or sorted maps), or to provide an ordering
+        //for collections of objects 
         //that don't have a natural ordering.
         // Comparator is a operator.
         // Comparable can be read as a ability.
         Collections.sort(list, new Comparator<Integer>() {
             @Override
-            //Compares its two arguments for order. Returns a negative integer, zero, or a positive integer as the first
-            // argument is less than, equal to, or greater than the second.
+            //Compares its two arguments for order. Returns a negative integer, zero, or a positive integer 
+            //as the first argument is less than, equal to, or greater than the second.
             public int compare(Integer o1, Integer o2) {
                 return o1 - o2; // 0‐>1
                 // return o2‐o1; // 1‐>0
@@ -140,11 +141,11 @@ public class JavaInterview {
         });
 
         //Comparator vs Comparable
-        //Comparable: This ordering is referred to as the class's natural ordering, and the class's compareTo method is
-        // referred to as its natural comparison method. Lists (and arrays) of objects that implement this interface can
-        // be sorted automatically by Collections.sort (and Arrays.sort).
-        //Note that null is not an instance of any class, and e.compareTo(null) should throw a NullPointerException even
-        // though e.equals(null) returns false.
+        //Comparable: This ordering is referred to as the class's natural ordering, and the class's compareTo 
+        //method is referred to as its natural comparison method. Lists (and arrays) of objects that implement
+        //this interface can be sorted automatically by Collections.sort (and Arrays.sort).
+        //Note that null is not an instance of any class, and e.compareTo(null) should throw a 
+        //NullPointerException even though e.equals(null) returns false.
         //http://www.importnew.com/19250.html
         class T implements Comparable<T>{
             int val = 0;
@@ -155,15 +156,15 @@ public class JavaInterview {
         }
 
         // Stack
-        //LinkedList: Doubly-linked list implementation of the List and Deque interfaces. Implements all optional list
-        // operations, and permits all elements (including null).
+        //LinkedList: Doubly-linked list implementation of the List and Deque interfaces. Implements all 
+        //optional list operations, and permits all elements (including null).
         //LinkedList(), LinkedList(Collection<? extends E> c)
         LinkedList<Integer> stack = new LinkedList<Integer>();
-        //Pushes an element onto the stack represented by this list. In other words, inserts the element at the front of
-        // this list. This method is equivalent to addFirst(E).
+        //Pushes an element onto the stack represented by this list. In other words, inserts the element
+        //at the front of this list. This method is equivalent to addFirst(E).
         stack.push(0);
-        //Pops an element from the stack represented by this list. In other words, removes and returns the first element
-        // of this list. This method is equivalent to removeFirst().
+        //Pops an element from the stack represented by this list. In other words, removes and returns 
+        //the first element of this list. This method is equivalent to removeFirst().
         stack.pop();
         //Retrieves, but does not remove, the head (first element) of this list., peekFirst, peekLast
         stack.peek();
@@ -197,11 +198,10 @@ public class JavaInterview {
 
         //About iterating
         //Interface Map.Entry<K,V>
-//        Set<Map.Entry<Character,Integer>> kvSet = map.entrySet();
-//        Iterator<Map.Entry> it = map.i
 
-        //TreeMap: A Red-Black tree based NavigableMap implementation. The map is sorted according to the natural order
-        // of its keys, or by a Comparator provided at map creation time, depending on which constructor is used.
+        //TreeMap: A Red-Black tree based NavigableMap implementation. The map is sorted according to 
+        //the natural order of its keys, or by a Comparator provided at map creation time, depending 
+        //on which constructor is used.
         //Iterating 1: from java5 and on
         for (Map.Entry<Integer, Integer> entry : map.entrySet())
             System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
