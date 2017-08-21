@@ -234,6 +234,17 @@ public class JavaInterview {
         }
 
         // mini heap
+        // mini heap
+        //An unbounded priority queue based on a priority heap. The elements of the priority queue are
+        //ordered according to their natural ordering, or by a Comparator provided at queue construction
+        //time, depending on which constructor is used. A priority queue does not permit null elements.
+        //This class and its iterator implement all of the optional methods of the Collection and 
+        //Iterator interfaces. The Iterator provided in method iterator() is not guaranteed to traverse
+        //the elements of the priority queue in any particular ORDER. If you need ordered traversal, consider 
+        //using Arrays.sort(pq.toArray()).
+        //Note that this implementation is not synchronized. Multiple threads should not access a
+        //PriorityQueue instance concurrently if any of the threads modifies the queue. Instead, use the 
+        //thread-safe PriorityBlockingQueue class.
         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
         pq.add(0);
         pq.remove();
