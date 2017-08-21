@@ -202,8 +202,32 @@ public class JavaInterview {
         for (Map.Entry<Integer, Integer> entry : map.entrySet())
             System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
         //Iterating 2:
+        //iterating keys
+        for (Integer key : map.keySet())
+            System.out.println("Key = " + key);
+        //iterating vals
+        for (Integer value : map.values())
+            System.out.println("Value = " + value);
         //Iterating 3:
-        //Iterating 4:
+        //with generics
+        Iterator<Map.Entry<Integer, Integer>> entries = map.entrySet().iterator();
+        while (entries.hasNext()) {
+            Map.Entry<Integer, Integer> entry = entries.next();
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        }
+        //without generics
+        Iterator entries2 = map.entrySet().iterator();
+        while (entries2.hasNext()) {
+            Map.Entry entry = (Map.Entry) entries2.next();
+            Integer key = (Integer) entry.getKey();
+            Integer value = (Integer) entry.getValue();
+            System.out.println("Key = " + key + ", Value = " + value);
+        }
+        //Iterating 4: Low efficiency
+        for (Integer key : map.keySet()) {
+            Integer value = map.get(key);
+            System.out.println("Key = " + key + ", Value = " + value);
+        }
 
         // mini heap
         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
