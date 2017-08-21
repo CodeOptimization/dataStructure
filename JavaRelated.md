@@ -36,8 +36,8 @@ public class JavaInterview {
         Integer.valueOf(s);
         //Parses the string argument as a signed decimal integer,  an int primitive;
         Integer.parseInt(s);
-        //Returns the string representation of the boolean/char/char array/specific subarray of the char array/double/
-        //float/int/long/Object argument.
+        //Returns the string representation of the boolean/char/char array/specific subarray of the char array/
+        //double/float/int/long/Object argument.
         String.valueOf(4); // integer to string
         int code = "abcaa".codePointAt(0);//i = 97
 
@@ -46,10 +46,11 @@ public class JavaInterview {
         sb.append("a");
         sb.insert(0, "a");// "aabc"
         sb.deleteCharAt(sb.length() - 1);
-        //Causes this character sequence to be replaced by the reverse of the sequence, return a StringBuilder object.
+        //Causes this character sequence to be replaced by the reverse of the sequence, return a StringBuilder 
+        //object.
         sb.reverse();
-        //The term "surrogate pair" refers to a means of encoding Unicode characters with high code-points in the UTF-16
-        // encoding scheme.
+        //The term "surrogate pair" refers to a means of encoding Unicode characters with high code-points in 
+        //the UTF-16 encoding scheme.
         StringBuilder surrogatePair = new StringBuilder("急");
         surrogatePair.reverse();// won't change, surrogatePair.length() = 1;
         StringBuilder chars = new StringBuilder("abc");
@@ -75,15 +76,15 @@ public class JavaInterview {
 
         //Set
         Set<Integer> set = new HashSet<>();
-        //Adds the specified element to this set if it is not already present (optional operation). Returns false  if
-        // list size doesn't change.
+        //Adds the specified element to this set if it is not already present (optional operation). Returns
+        //false  if list size doesn't change.
         set.add(0); //true
         set.add(0); //false
-        //Removes the specified element from this set if it is present (optional operation).  Returns false  if list size
-        // doesn't change.
+        //Removes the specified element from this set if it is present (optional operation).  Returns false 
+        //if list size doesn't change.
         set.remove(0);
-        //Returns true if this set contains the specified element. More formally, returns true if and only if this set
-        // contains an element e such that (o==null ? e==null : o.equals(e)).
+        //Returns true if this set contains the specified element. More formally, returns true if and only 
+        //if this set contains an element e such that (o==null ? e==null : o.equals(e)).
         if (set.contains(0)) {
         }
         //Returns true if this set contains no elements.
@@ -94,35 +95,38 @@ public class JavaInterview {
         // List
         List<Integer> list = new ArrayList<Integer>();
         List<List<Integer>> list1 = new ArrayList<List<Integer>>();
-        //boolean add(E e): Appends the specified element to the end of this list (optional operation). Returns false
-        // if list size doesn't chage.
+        //boolean add(E e): Appends the specified element to the end of this list (optional operation). Returns 
+        //false if list size doesn't chage.
         list.add(0);// list = [0]
-        //Inserts the specified element at the specified position in this list (optional operation). Shifts the element
-        // currently at that position (if any) and any subsequent elements to the right (adds one to their indices).
+        //Inserts the specified element at the specified position in this list (optional operation). Shifts the 
+        //element currently at that position (if any) and any subsequent elements to the right (adds one to 
+        //their indices).
         list.add(0, 1); //list = [1, 0]
         //Returns the element at the specified position in this list.
         list.get(0);
         //Returns the number of elements in this list.
         list.size();
-        //Removes the first occurrence of the specified element from this list, if it is present (optional operation).
+        //Removes the first occurrence of the specified element from this list, if it is present (optional 
+        //operation).
         // If this list does not contain the element, it is unchanged. Returns false if list size doesn't chage.
         list.remove(list.size() - 1);
 
-        //public static <T extends Comparable<? super T>> void sort(List<T> list): Sorts the specified list into
-        // ascending order, according to the natural ordering of its elements. All elements in the list must implement
-        // the Comparable interface. Furthermore, all elements in the list must be mutually comparable (that is,
-        // e1.compareTo(e2) must not throw a ClassCastException for any elements e1 and e2 in the list).
+        //public static <T extends Comparable<? super T>> void sort(List<T> list): Sorts the specified list
+        //into ascending order, according to the natural ordering of its elements. All elements in the list
+        //must implement the Comparable interface. Furthermore, all elements in the list must be mutually
+        //comparable (that is, e1.compareTo(e2) must not throw a ClassCastException for any elements e1 and 
+        //e2 in the list).
         Collections.sort(list);
-        //1. public static <T> Comparator<T> reverseOrder(): Returns a comparator that imposes the reverse of the
-        // natural ordering on a collection of objects that implement the Comparable interface.
-        //2. public static <T> void sort(List<T> list, Comparator<? super T> c): Sorts the specified list according to
-        // the order induced by the specified comparator.
+        //1. public static <T> Comparator<T> reverseOrder(): Returns a comparator that imposes the reverse 
+        //of the natural ordering on a collection of objects that implement the Comparable interface.
+        //2. public static <T> void sort(List<T> list, Comparator<? super T> c): Sorts the specified list 
+        //according to the order induced by the specified comparator.
         Collections.sort(list, Collections.reverseOrder());
-        //Interface java.util.Comparator<T>: A comparison function, which imposes a total ordering on some collection of objects.
-        // Comparators can be passed to a sort method (such as Collections.sort or Arrays.sort) to allow precise control
-        // over the sort order.Comparators can also be used to control the order of certain data structures (such as
-        // sorted sets or sorted maps), or to provide an ordering for collections of objects that don't have a natural
-        // ordering.
+        //Interface java.util.Comparator<T>: A comparison function, which imposes a total ordering on some 
+        //collection of objects. Comparators can be passed to a sort method (such as Collections.sort or Arrays.sort)
+        //to allow precise control over the sort order.Comparators can also be used to control the order of certain
+        //data structures (such as sorted sets or sorted maps), or to provide an ordering for collections of objects 
+        //that don't have a natural ordering.
         // Comparator is a operator.
         // Comparable can be read as a ability.
         Collections.sort(list, new Comparator<Integer>() {
