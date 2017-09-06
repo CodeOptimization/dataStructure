@@ -1,8 +1,10 @@
 ``` java
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar; 
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date; 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -12,6 +14,8 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
+
+import java.text.SimpleDateFormat; 
 
 public class JavaInterview {
     public static void main(String[] args) {
@@ -80,6 +84,8 @@ public class JavaInterview {
         int min = Integer.MIN_VALUE;
         //Sorts the specified array into ascending numerical order.
         Arrays.sort(a);
+        //conver to array based list, but you can not update
+        Arrays.asList(b1);
         //Returns a fixed-size list backed by the specified array.
         List<String> stooges = Arrays.asList("Larry", "Moe", "Curly");
         for (int i = 0; i < a.length; i++)
@@ -102,6 +108,18 @@ public class JavaInterview {
         set.isEmpty();
         //Returns the number of elements in this set (its cardinality).
         set.size();
+        //3 ways to iterating the set
+        //1, by iterator
+        Iterator<String> itr = set.iterator();
+        while(itr.hasNext())
+            System.out.println(itr.next());
+        //2, by for-loop
+        for(Integer num : set)
+            System.out.println(num);
+        //3, by forEach in java8
+        set.forEach(System.out::println);
+        
+
 
         // List
         List<Integer> list = new ArrayList<Integer>();
@@ -264,6 +282,24 @@ public class JavaInterview {
         pq.size();
         while (!pq.isEmpty()) {
         }
+        
+        //out put time
+        System.out.println("Time  = " + System.currentTimeMillis());
+        
+        Date now = new Date(); 
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//Time format
+
+        String timeNow = dateFormat.format(now); 
+        System.out.println("Now: " + timeNow); 
+        
+        Calendar c = Calendar.getInstance();//You could update each component
+        int year = c.get(Calendar.YEAR); 
+        int month = c.get(Calendar.MONTH); 
+        int date = c.get(Calendar.DATE); 
+        int hour = c.get(Calendar.HOUR_OF_DAY); 
+        int minute = c.get(Calendar.MINUTE); 
+        int second = c.get(Calendar.SECOND); 
+        System.out.println("Now: " + year + "/" + month + "/" + date + " " +hour + ":" +minute + ":" + second);
     }
 }
 ```
