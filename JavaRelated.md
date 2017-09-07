@@ -261,6 +261,15 @@ public class JavaInterview {
             Integer value = map.get(key);
             System.out.println("Key = " + key + ", Value = " + value);
         }
+        //Iterating and remove
+        for (Iterator<Map.Entry<String, Integer>> it = myHashMap.entrySet().iterator(); it.hasNext();){
+            Map.Entry<String, Integer> item = it.next();
+            //... todo with item
+            it.remove();
+        }
+        for (Map.Entry<String, Integer> item : myHashMap.entrySet()){
+            System.out.println(item.getKey());
+        }
 
         // mini heap
         // mini heap
