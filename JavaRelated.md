@@ -44,7 +44,7 @@ public class JavaInterview {
         s.lastIndexOf("a");
         //Returns the index within this string of the last occurrence of the specified character, searching
         //backward starting at the specified index((include)).
-        s.indexOf("a", 1);
+        s.lastIndexOf("a", 1);
         //Converts this string to a new character array.
         s.toCharArray();
         //Returns an Integer object holding the value of the specified String, an Integer object
