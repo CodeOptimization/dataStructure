@@ -110,7 +110,7 @@ public class JavaInterview {
         set.size();
         //3 ways to iterating the set
         //1, by iterator
-        Iterator<String> itr = set.iterator();
+        Iterator<Integer> itr = set.iterator();
         while(itr.hasNext())
             System.out.println(itr.next());
         //2, by for-loop
