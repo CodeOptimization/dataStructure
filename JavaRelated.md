@@ -164,8 +164,8 @@ public class JavaInterview {
             //Compares its two arguments for order. Returns a negative integer, zero, or a positive integer 
             //as the first argument is less than, equal to, or greater than the second.
             public int compare(Integer o1, Integer o2) {
-                return o1 - o2; // 0‐>1
-                // return o2‐o1; // 1‐>0
+                Integer.compare(o1, o1); // 0‐>1
+                // return -Integer.compare(o1, o1); // 1‐>0
             }
         });
 
